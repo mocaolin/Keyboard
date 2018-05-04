@@ -98,20 +98,20 @@ public class SpecialEditText extends android.support.v7.widget.AppCompatEditText
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
         mLength = text.toString().length();
         invalidate();
-        if (mCallback != null) {
+        if (mListener != null) {
             if (mLength == mNum) {
-                mCallback.OnSpecialEditTextComplete(this, text.toString());
+                mListener.OnSpecialEditTextComplete(this, text.toString());
             }
         }
     }
 
-    public interface OnSpecialEditTextCallback {
+    public interface OnSpecialEditTextListener {
         void OnSpecialEditTextComplete(SpecialEditText editText, String text);
     }
 
-    public OnSpecialEditTextCallback mCallback;
+    public OnSpecialEditTextListener mListener;
 
-    public void setCallback(OnSpecialEditTextCallback callback) {
-        mCallback = callback;
+    public void setListener(OnSpecialEditTextListener listener) {
+        mListener = listener;
     }
 }
