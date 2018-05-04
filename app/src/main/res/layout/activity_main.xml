@@ -15,7 +15,13 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         />
-
+    <com.jkt.keyboard.CircleEditText
+        android:id="@+id/edit1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        />
     <com.jkt.keyboard.NumberInputView
         android:id="@+id/input"
         android:layout_width="match_parent"

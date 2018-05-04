@@ -5,5 +5,7 @@
     <color name="circle_color">#a7a7a7</color>
     <color name="d_color">#a7a7a7</color>
     <color name="divider_color">#F0EFEF</color>
+    <color name="selector_color">#08c3ed</color>
+    <color name="un_selector_color">#000</color>
 
 </resources>

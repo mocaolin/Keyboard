@@ -1,12 +1,13 @@
 package com.jkt.keyboard;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements SpecialEditText.OnSpecialEditTextListener, NumberInputView.OnNumberInputViewListener {
+public class MainActivity extends AppCompatActivity implements SpecialEditText.OnSpecialEditTextListener, NumberInputView.OnNumberInputViewListener, CircleEditText.OnCircleEditTextListener {
 
     private SpecialEditText mSpecialEditText;
+    private CircleEditText mCircleEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements SpecialEditText.O
         mSpecialEditText.setListener(this);
         NumberInputView inputView = (NumberInputView) findViewById(R.id.input);
         inputView.setListener(this);
+        mCircleEditText = (CircleEditText) findViewById(R.id.edit1);
+        mCircleEditText.setListener(this);
     }
 
     @Override
@@ -24,6 +27,11 @@ public class MainActivity extends AppCompatActivity implements SpecialEditText.O
         editText.setText("");
     }
 
+    @Override
+    public void OnCircleEditTextComplete(CircleEditText editText, String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        editText.setText("");
+    }
     @Override
     public void onNumberClick(NumberInputView view, int num) {
         String s = mSpecialEditText.getText().toString();
@@ -45,4 +53,5 @@ public class MainActivity extends AppCompatActivity implements SpecialEditText.O
         String substring = s.substring(0, s.length() - 1);
         mSpecialEditText.setText(substring);
     }
+
 }
