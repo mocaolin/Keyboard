@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="border_color">#a7a7a7</color>
+    <color name="interval_color">#a7a7a7</color>
+    <color name="circle_color">#a7a7a7</color>
+
+</resources>
