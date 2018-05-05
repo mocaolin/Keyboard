@@ -7,5 +7,6 @@
     <color name="divider_color">#F0EFEF</color>
     <color name="selector_color">#08c3ed</color>
     <color name="un_selector_color">#000</color>
+    <color name="withe">#fff</color>
 
 </resources>

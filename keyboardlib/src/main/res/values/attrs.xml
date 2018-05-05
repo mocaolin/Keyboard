@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="special">
         <attr name="border_color" format="color"/>
+        <attr name="item_color" format="color"/>
         <attr name="interval_color" format="color"/>
         <attr name="circle_color" format="color"/>
         <attr name="border_width" format="dimension"/>
