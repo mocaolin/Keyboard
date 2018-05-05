@@ -105,6 +105,10 @@ public class BorderEditText extends android.support.v7.widget.AppCompatEditText 
         }
     }
 
+    public void clear(){
+        setText("");
+    }
+
     public interface OnBorderEditTextListener {
         void OnBorderEditTextComplete(BorderEditText editText, String text);
     }

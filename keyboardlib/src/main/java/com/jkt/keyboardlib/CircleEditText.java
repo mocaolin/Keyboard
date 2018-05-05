@@ -85,6 +85,10 @@ public class CircleEditText extends android.support.v7.widget.AppCompatEditText 
         }
     }
 
+    public void clear() {
+        setText("");
+    }
+
     public interface OnCircleEditTextListener {
         void OnCircleEditTextComplete(CircleEditText editText, String text);
     }

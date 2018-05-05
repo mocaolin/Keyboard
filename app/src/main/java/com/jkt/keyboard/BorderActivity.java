@@ -2,6 +2,8 @@ package com.jkt.keyboard;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.jkt.keyboardlib.BorderEditText;
@@ -19,8 +21,15 @@ public class BorderActivity extends AppCompatActivity {
         mBorderEditText.setListener(new BorderEditText.OnBorderEditTextListener() {
             @Override
             public void OnBorderEditTextComplete(BorderEditText editText, String text) {
-                Toast.makeText(BorderActivity.this, text, Toast.LENGTH_SHORT).show();
-                mBorderEditText.setText("");
+                if (text.equals("123456")) {
+                    Toast.makeText(BorderActivity.this, " success  " + text, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Toast.makeText(BorderActivity.this," error  "+ text, Toast.LENGTH_SHORT).show();
+                //开启错误动画  与下面clear 二选一
+                errorAnim();
+//                mBorderEditText.clear();
+
             }
         });
         NumberInputView numberInputView = (NumberInputView) findViewById(R.id.input);
@@ -28,6 +37,9 @@ public class BorderActivity extends AppCompatActivity {
             @Override
             public void onNumberClick(NumberInputView view, int num) {
                 //mBorderEditText 字符串长度+1
+                if (!mBorderEditText.isEnabled()) {
+                    return;
+                }
                 String s = mBorderEditText.getText().toString();
                 s += num;
                 mBorderEditText.setText(s);
@@ -51,4 +63,26 @@ public class BorderActivity extends AppCompatActivity {
         });
     }
 
+    private void errorAnim() {
+        Animation animation = AnimationUtils.loadAnimation(
+                this, R.anim.shake);
+        mBorderEditText.startAnimation(animation);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                mBorderEditText.setEnabled(false);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mBorderEditText.clear();
+                mBorderEditText.setEnabled(true);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+    }
 }
