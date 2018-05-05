@@ -1,4 +1,4 @@
-package com.jkt.keyboard;
+package com.jkt.keyboardlib;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 public class NumberInputView extends LinearLayout {
 
     private Context mContext;
-    private View mInflate;
     private View[] mViews;
 
     public NumberInputView(Context context, @Nullable AttributeSet attrs) {
@@ -27,19 +26,19 @@ public class NumberInputView extends LinearLayout {
 
 
     private void initViews() {
-        mInflate = LayoutInflater.from(mContext).inflate(R.layout.number_input_view, this, true);
-        View zero = mInflate.findViewById(R.id.zero);
-        View one = mInflate.findViewById(R.id.one);
-        View two = mInflate.findViewById(R.id.two);
-        View three = mInflate.findViewById(R.id.three);
-        View four = mInflate.findViewById(R.id.four);
-        View five = mInflate.findViewById(R.id.five);
-        View six = mInflate.findViewById(R.id.six);
-        View seven = mInflate.findViewById(R.id.seven);
-        View eight = mInflate.findViewById(R.id.eight);
-        View nine = mInflate.findViewById(R.id.nine);
-        View clear = mInflate.findViewById(R.id.clear);
-        View delete = mInflate.findViewById(R.id.backward);
+        View inflate = LayoutInflater.from(mContext).inflate(R.layout.number_input_view, this, true);
+        View zero = inflate.findViewById(R.id.zero);
+        View one = inflate.findViewById(R.id.one);
+        View two = inflate.findViewById(R.id.two);
+        View three = inflate.findViewById(R.id.three);
+        View four = inflate.findViewById(R.id.four);
+        View five = inflate.findViewById(R.id.five);
+        View six = inflate.findViewById(R.id.six);
+        View seven = inflate.findViewById(R.id.seven);
+        View eight = inflate.findViewById(R.id.eight);
+        View nine = inflate.findViewById(R.id.nine);
+        View clear = inflate.findViewById(R.id.clear);
+        View delete = inflate.findViewById(R.id.backward);
         mViews = new View[]{zero, one, two, three, four, five, six, seven, eight, nine, clear, delete};
     }
 

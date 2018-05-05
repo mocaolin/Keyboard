@@ -1,4 +1,4 @@
-package com.jkt.keyboard;
+package com.jkt.keyboardlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;

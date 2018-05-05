@@ -1,4 +1,4 @@
-package com.jkt.keyboard;/**
+package com.jkt.keyboardlib;/**
  * Created by admin on 2017/4/3.
  */
 

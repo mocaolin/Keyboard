@@ -1,4 +1,4 @@
-package com.jkt.keyboard;
+package com.jkt.keyboardlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import android.util.AttributeSet;
  * Created by Allen on 2018/5/4/004.
  */
 
-public class SpecialEditText extends android.support.v7.widget.AppCompatEditText {
+public class BorderEditText extends android.support.v7.widget.AppCompatEditText {
     private Context mContext;
     private Paint mBorderPaint;
     private Paint mIntervalPaint;
@@ -23,7 +23,7 @@ public class SpecialEditText extends android.support.v7.widget.AppCompatEditText
     private float mCircleRadius;
     private float mBorderAngle;
 
-    public SpecialEditText(Context context, AttributeSet attrs) {
+    public BorderEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         initPaints();
@@ -100,18 +100,18 @@ public class SpecialEditText extends android.support.v7.widget.AppCompatEditText
         invalidate();
         if (mListener != null) {
             if (mLength == mNum) {
-                mListener.OnSpecialEditTextComplete(this, text.toString());
+                mListener.OnBorderEditTextComplete(this, text.toString());
             }
         }
     }
 
-    public interface OnSpecialEditTextListener {
-        void OnSpecialEditTextComplete(SpecialEditText editText, String text);
+    public interface OnBorderEditTextListener {
+        void OnBorderEditTextComplete(BorderEditText editText, String text);
     }
 
-    public OnSpecialEditTextListener mListener;
+    public OnBorderEditTextListener mListener;
 
-    public void setListener(OnSpecialEditTextListener listener) {
+    public void setListener(OnBorderEditTextListener listener) {
         mListener = listener;
     }
 }

@@ -5,28 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jkt.keyboard.MainActivity">
+    >
 
-    <com.jkt.keyboard.SpecialEditText
-        android:id="@+id/edit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        />
-    <com.jkt.keyboard.CircleEditText
-        android:id="@+id/edit1"
-        android:layout_centerHorizontal="true"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        />
-    <com.jkt.keyboard.NumberInputView
-        android:id="@+id/input"
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/borderStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:onClick="onClick"
+        android:text="borderStyle"/>
 
-    </com.jkt.keyboard.NumberInputView>
+    <Button
+        android:id="@+id/circleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:onClick="onClick"
+        android:text="circleStyle"/>
+
 </RelativeLayout>

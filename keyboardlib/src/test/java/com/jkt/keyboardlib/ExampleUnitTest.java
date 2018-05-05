@@ -1,4 +1,4 @@
-package com.jkt.keyboard;
+package com.jkt.keyboardlib;
 
 import org.junit.Test;
 

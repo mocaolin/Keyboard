@@ -10,6 +10,7 @@
         <attr name="circle_radius" format="dimension"/>
         <attr name="item_num" format="integer"/>
     </declare-styleable>
+
     <declare-styleable name="circle">
         <attr name="circle_selector_color" format="color"/>
         <attr name="circle_un_selector_color" format="color"/>
