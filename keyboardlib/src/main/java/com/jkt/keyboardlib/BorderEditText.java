@@ -33,6 +33,7 @@ public class BorderEditText extends android.support.v7.widget.AppCompatEditText 
         setFilters(new InputFilter[]{new InputFilter.LengthFilter(mNum)});
         setInputType(InputType.TYPE_CLASS_NUMBER);
         setBackgroundDrawable(null);
+        setFocusable(false);
     }
 
     private void initPaints() {

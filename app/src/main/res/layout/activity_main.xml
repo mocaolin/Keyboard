@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:onClick="onClick"
-        android:text="borderStyle"/>
+        android:text="边框样式"/>
 
     <Button
         android:id="@+id/circleStyle"
@@ -24,6 +24,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:onClick="onClick"
-        android:text="circleStyle"/>
+        android:text="圆形样式"/>
 
 </RelativeLayout>
