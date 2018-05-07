@@ -45,21 +45,21 @@ public class BorderEditText extends android.support.v7.widget.AppCompatEditText 
 
     private void initAttrs(AttributeSet attrs) {
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs,
-                R.styleable.special, 0, 0);
+                R.styleable.border, 0, 0);
         //外边框相关
-        int borderColor = typedArray.getColor(R.styleable.special_border_color, mContext.getResources().getColor(R.color.border_color));
-        mBorderAngle = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.special_border_angle, 10));
-        mBorderWidth = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.special_border_width, 1));
+        int borderColor = typedArray.getColor(R.styleable.border_border_color, mContext.getResources().getColor(R.color.border_color));
+        mBorderAngle = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.border_border_angle, 10));
+        mBorderWidth = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.border_border_width, 1));
         //item颜色
-        int itemColor = typedArray.getColor(R.styleable.special_border_color, mContext.getResources().getColor(R.color.withe));
+        int itemColor = typedArray.getColor(R.styleable.border_border_color, mContext.getResources().getColor(R.color.withe));
         //间隔线相关
-        int intervalColor = typedArray.getColor(R.styleable.special_interval_color, mContext.getResources().getColor(R.color.interval_color));
-        float intervalWidth = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.special_interval_width, 1));
+        int intervalColor = typedArray.getColor(R.styleable.border_interval_color, mContext.getResources().getColor(R.color.interval_color));
+        float intervalWidth = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.border_interval_width, 1));
         //实心圆相关
-        int circleColor = typedArray.getColor(R.styleable.special_circle_color, mContext.getResources().getColor(R.color.circle_color));
-        mCircleRadius = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.special_circle_radius, 5));
+        int circleColor = typedArray.getColor(R.styleable.border_circle_color, mContext.getResources().getColor(R.color.circle_color));
+        mCircleRadius = DensityUtil.dp2px(mContext, typedArray.getDimension(R.styleable.border_circle_radius, 5));
         //num个数
-        mNum = typedArray.getInteger(R.styleable.special_item_num, 6);
+        mNum = typedArray.getInteger(R.styleable.border_item_num, 6);
 
 
         mBorderPaint.setColor(borderColor);

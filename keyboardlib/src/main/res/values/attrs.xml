@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="special">
+    <declare-styleable name="border">
         <attr name="border_color" format="color"/>
         <attr name="item_color" format="color"/>
         <attr name="interval_color" format="color"/>

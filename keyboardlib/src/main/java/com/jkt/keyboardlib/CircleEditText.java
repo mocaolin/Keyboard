@@ -40,7 +40,7 @@ public class CircleEditText extends android.support.v7.widget.AppCompatEditText 
 
     private void initAttrs(AttributeSet attrs) {
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs,
-                R.styleable.special, 0, 0);
+                R.styleable.circle, 0, 0);
         int selectorColor = typedArray.getColor(R.styleable.circle_circle_selector_color, mContext.getResources().getColor(R.color.selector_color));
         int unSelectorColor = typedArray.getColor(R.styleable.circle_circle_un_selector_color, mContext.getResources().getColor(R.color.un_selector_color));
 
